@@ -9,10 +9,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:weather_app/main.dart';
-void main(){
-  testWidgets('Home Page renders', (WidgetTester tester) async{
+
+void main() {
+  testWidgets('Preloader Page renders', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
-    expect(find.text('Weather App Home Page'), findsOneWidget);
-  }
-  );
+    expect(find.text('Preloader Page'), findsOneWidget);
+  });
 }

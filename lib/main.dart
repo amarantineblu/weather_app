@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/pages/home_page.dart';
+import 'package:weather_app/pages/preloader_page.dart';
 import 'package:weather_app/theme/colors.dart';
 
 void main() {
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: primaryColor,
         primaryTextTheme: TextTheme(titleLarge: TextStyle(color: Colors.white)),
       ),
-      home: const MyHomePage(),
+      // home: const MyHomePage(),
+      home: const PreloaderPage(),
     );
   }
 }
