@@ -28,13 +28,20 @@ class _PreloaderPageState extends State<PreloaderPage> {
       // ignore: avoid_unnecessary_containers
       body: Container(
         child: Center(
-          child: Text(
-            "Preloader Page",
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.cloud, size: 48, color: Colors.white),
+              SizedBox(width: 16),
+              Text(
+                "Preloader Page",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ],
           ),
         ),
       ),
