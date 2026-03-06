@@ -15,11 +15,9 @@ class MyHomePage extends StatelessWidget {
           child: Text(
             "Weather App Home Page",
 
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: primaryColor,
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(color: primaryColor),
           ),
         ),
       ),

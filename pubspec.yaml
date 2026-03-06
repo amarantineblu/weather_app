@@ -60,8 +60,8 @@ flutter:
 
   # If you want to display images during the preloader (or anywhere else),
   # declare them below and place the files under an `assets/` directory.
-  assets:
-    - assets/logo.png # example image; change filename as needed
+  #assets:
+    #- assets/logo.png # example image; change filename as needed
 
   fonts:
     - family: SUSE

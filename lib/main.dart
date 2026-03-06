@@ -18,13 +18,16 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'SUSE',
-
+        textTheme: TextTheme(
+          titleLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          bodyMedium: TextStyle(fontSize: 16),
+          bodySmall: TextStyle(fontSize: 14),
+        ),
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         colorScheme: ColorScheme.fromSeed(
           seedColor: primaryColor,
           primary: primaryColor,
           secondary: accentColor,
-
           // background: backgroundColor,
         ),
         scaffoldBackgroundColor: primaryColor,
