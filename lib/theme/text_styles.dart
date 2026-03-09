@@ -15,10 +15,7 @@ class AppTextStyles {
     color: accentColor,
   );
 
-  static const TextStyle body = TextStyle(
-    fontSize: 16,
-    color: Colors.black87,
-  );
+  static const TextStyle body = TextStyle(fontSize: 16, color: Colors.black87);
 
   static const TextStyle whiteTitle = TextStyle(
     fontSize: 24,
