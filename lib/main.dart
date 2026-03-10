@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/pages/home_page.dart';
+// import 'package:weather_app/pages/home_page.dart';
 import 'package:weather_app/pages/preloader_page.dart';
 import 'package:weather_app/theme/colors.dart';
 
