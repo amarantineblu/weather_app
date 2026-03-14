@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'SUSE',
         textTheme: TextTheme(
           titleLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-          bodyMedium: TextStyle(fontSize: 16),
-          bodySmall: TextStyle(fontSize: 14),
+          bodyMedium: TextStyle(fontSize: 16, color: Colors.white),
+          bodySmall: TextStyle(fontSize: 14, color: Colors.white),
         ),
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         colorScheme: ColorScheme.fromSeed(

@@ -8,12 +8,12 @@ void main() {
     expect(find.text('Preloader Page'), findsOneWidget);
   });
 
-  // testWidgets('Home Page renders after navigation', (
-  //   WidgetTester tester,
-  // ) async {
-  //   await tester.pumpWidget(const MyApp());
-  //   await tester.pump(const Duration(seconds: 3)); // wait for timer/navigation
-  //   await tester.pumpAndSettle(); // settle animations
-  //   expect(find.text('Weather App Home Page'), findsOneWidget);
-  // });
+  testWidgets('Home Page renders after navigation', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pump(const Duration(seconds: 3)); // wait for timer/navigation
+    await tester.pumpAndSettle(); // settle animations
+    expect(find.text('Berlin'), findsOneWidget);
+  });
 }
