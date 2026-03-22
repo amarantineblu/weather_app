@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:weather_app/theme/colors.dart';
+import 'package:weather_app/utils/theme/colors.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
