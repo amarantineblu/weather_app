@@ -1,7 +1,8 @@
-// ignore_for_file: use_build_context_synchronously
+// ignore_for_file: avoid_unnecessary_containers, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
 import 'package:weather_app/pages/home_page.dart';
+import 'package:weather_app/utils/constants/colors.dart';
 
 class PreloaderPage extends StatefulWidget {
   const PreloaderPage({super.key});
@@ -25,7 +26,8 @@ class _PreloaderPageState extends State<PreloaderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // ignore: avoid_unnecessary_containers
+      backgroundColor: TColors.primaryColor,
+      // scaffoldBackgroundColor: primaryColor,
       body: Container(
         child: Center(
           child: Row(

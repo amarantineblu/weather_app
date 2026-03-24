@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:weather_app/pages/home_page.dart';
 import 'package:weather_app/pages/preloader_page.dart';
-import 'package:weather_app/utils/theme/colors.dart';
+import 'package:weather_app/utils/constants/colors.dart';
 import 'package:weather_app/utils/theme/theme.dart';
 
 void main() {
