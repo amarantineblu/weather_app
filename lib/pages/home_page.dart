@@ -305,6 +305,73 @@ class MyHomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 20),
+              Expanded(
+                child: Column(
+                  children: [
+                    Text(
+                      'News Weather Details',
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      textAlign: TextAlign.left,
+                    ),
+                    Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      color: TColors.primaryColor,
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(16),
+                                topRight: Radius.circular(16),
+                              ),
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "images/tropical_storm.jpeg",
+                                ), // your header image
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          ListTile(
+                            leading: Icon(
+                              Icons.water_drop,
+                              color: Colors.white,
+                            ),
+                            title: Text(
+                              'Humidity',
+                              style: Theme.of(context).textTheme.bodyMedium
+                                  ?.copyWith(color: Colors.white),
+                            ),
+                            trailing: Text(
+                              '80%',
+                              style: Theme.of(context).textTheme.headlineMedium
+                                  ?.copyWith(color: Colors.white),
+                            ),
+                          ),
+                          ListTile(
+                            leading: Icon(Icons.air, color: Colors.white),
+                            title: Text(
+                              'Wind Speed',
+                              style: Theme.of(context).textTheme.bodyMedium
+                                  ?.copyWith(color: Colors.white),
+                            ),
+                            trailing: Text(
+                              '15 km/h',
+                              style: Theme.of(context).textTheme.headlineMedium
+                                  ?.copyWith(color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

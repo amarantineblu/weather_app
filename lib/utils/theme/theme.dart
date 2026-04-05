@@ -8,7 +8,7 @@ class TAppTheme {
 
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-    // fontFamily: ,
+    fontFamily: 'SUSE',
     brightness: Brightness.light,
     primaryColor: TColors.primaryColor,
     scaffoldBackgroundColor: TColors.backgroundColor,
