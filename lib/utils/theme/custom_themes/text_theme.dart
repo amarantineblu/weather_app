@@ -7,12 +7,12 @@ class TTextTheme {
     headlineLarge: TextStyle().copyWith(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
-      color: Colors.black,
+      color: const Color.fromARGB(255, 71, 68, 68),
     ),
     headlineMedium: TextStyle().copyWith(
       fontSize: 24.0,
       fontWeight: FontWeight.w600,
-      color: Colors.black,
+      color: const Color.fromARGB(255, 40, 39, 39),
     ),
     headlineSmall: TextStyle().copyWith(
       fontSize: 18.0,
