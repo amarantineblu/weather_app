@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:weather_app/utils/constants/colors.dart';
+// ignore: unused_import
 import 'package:weather_app/utils/theme/theme.dart';
+import 'package:weather_app/utils/widgets/reusable_card.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -31,278 +33,11 @@ class MyHomePage extends StatelessWidget {
               SizedBox(height: 20),
               SizedBox(
                 height: 180,
-                child: ListView(
-                  // shrinkWrap: true,
+                child: ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) => ReusableCard(),
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      color: TColors.primaryColor,
-                      child: SizedBox(
-                        width: 250,
-                        height: 150,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  RichText(
-                                    text: TextSpan(
-                                      text: 'Chance of Rain 60%\n',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium
-                                          ?.copyWith(color: Colors.white),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Partly Cloudy',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headlineMedium
-                                              ?.copyWith(color: Colors.white),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.cloud,
-                                    size: 50,
-                                    color: Colors.white,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    children: [
-                                      Text(
-                                        'Min Temp',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                      Text(
-                                        '15°C',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headlineMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text(
-                                        'Max Temp',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                      Text(
-                                        '25°C',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headlineMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      color: TColors.primaryColor,
-                      child: SizedBox(
-                        width: 250,
-                        height: 150,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  RichText(
-                                    text: TextSpan(
-                                      text: 'Chance of Rain 60%\n',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium
-                                          ?.copyWith(color: Colors.white),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Partly Cloudy',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headlineMedium
-                                              ?.copyWith(color: Colors.white),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.cloud,
-                                    size: 50,
-                                    color: Colors.white,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    children: [
-                                      Text(
-                                        'Min Temp',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                      Text(
-                                        '15°C',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headlineMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text(
-                                        'Max Temp',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                      Text(
-                                        '25°C',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headlineMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      color: TColors.primaryColor,
-                      child: SizedBox(
-                        width: 250,
-                        height: 150,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  RichText(
-                                    text: TextSpan(
-                                      text: 'Chance of Rain 60%\n',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodyMedium
-                                          ?.copyWith(color: Colors.white),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Partly Cloudy',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headlineMedium
-                                              ?.copyWith(color: Colors.white),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.cloud,
-                                    size: 50,
-                                    color: Colors.white,
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Column(
-                                    children: [
-                                      Text(
-                                        'Min Temp',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                      Text(
-                                        '15°C',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headlineMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    children: [
-                                      Text(
-                                        'Max Temp',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                      Text(
-                                        '25°C',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headlineMedium
-                                            ?.copyWith(color: Colors.white),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+                  // shrinkWrap: true,
                 ),
               ),
               SizedBox(height: 20),
@@ -337,34 +72,52 @@ class MyHomePage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          ListTile(
-                            leading: Icon(
-                              Icons.water_drop,
-                              color: Colors.white,
-                            ),
-                            title: Text(
-                              'Humidity',
-                              style: Theme.of(context).textTheme.bodyMedium
-                                  ?.copyWith(color: Colors.white),
-                            ),
-                            trailing: Text(
-                              '80%',
-                              style: Theme.of(context).textTheme.headlineMedium
-                                  ?.copyWith(color: Colors.white),
-                            ),
-                          ),
-                          ListTile(
-                            leading: Icon(Icons.air, color: Colors.white),
-                            title: Text(
-                              'Wind Speed',
-                              style: Theme.of(context).textTheme.bodyMedium
-                                  ?.copyWith(color: Colors.white),
-                            ),
-                            trailing: Text(
-                              '15 km/h',
-                              style: Theme.of(context).textTheme.headlineMedium
-                                  ?.copyWith(color: Colors.white),
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container(
+                                child: Column(
+                                  children: [
+                                    Icon(Icons.water_drop, color: Colors.white),
+                                    Text(
+                                      'Humidity',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium
+                                          ?.copyWith(color: Colors.white),
+                                    ),
+                                    Text(
+                                      '80%',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineMedium
+                                          ?.copyWith(color: Colors.white),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                child: Column(
+                                  children: [
+                                    Icon(Icons.air, color: Colors.white),
+                                    Text(
+                                      'Wind Speed',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium
+                                          ?.copyWith(color: Colors.white),
+                                    ),
+                                    Text(
+                                      '15 km/h',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineMedium
+                                          ?.copyWith(color: Colors.white),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
