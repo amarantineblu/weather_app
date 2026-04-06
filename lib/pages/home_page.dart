@@ -16,10 +16,58 @@ class MyHomePage extends StatelessWidget {
         // backgroundColor:  ,
         appBar: AppBar(
           backgroundColor: TColors.primaryColor,
-          leading: Icon(Icons.menu),
+          leading: Builder(
+            builder: (context) {
+              return IconButton(
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                  // ignore: avoid_print
+                  // print('Hello world');
+                },
+                icon: Icon(Icons.menu),
+              );
+            },
+          ),
           title: Text('Berlin, Germany'),
           actions: [Icon(Icons.search)],
         ),
+        drawer: Drawer(
+          width: MediaQuery.of(context).size.width * .5,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(color: Colors.blue),
+                child: Text(
+                  "Menu",
+                  style: TextStyle(color: Colors.white, fontSize: 24),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text("Home"),
+                onTap: () {
+                  Navigator.pop(context); // closes the drawer
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.settings),
+                title: Text("Settings"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.info),
+                title: Text("About"),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
+
         body: SingleChildScrollView(
           padding: EdgeInsets.all(8.0),
           child: Column(
