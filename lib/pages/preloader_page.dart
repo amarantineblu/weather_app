@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:weather_app/pages/home_page.dart';
+import 'package:weather_app/pages/hidden_drawer_page.dart';
 import 'package:weather_app/utils/constants/colors.dart';
 
 class PreloaderPage extends StatefulWidget {
@@ -18,7 +18,7 @@ class _PreloaderPageState extends State<PreloaderPage> {
     Future.delayed(Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => MyHomePage()),
+        MaterialPageRoute(builder: (context) => buildHiddenDrawer()),
       );
     });
   }
